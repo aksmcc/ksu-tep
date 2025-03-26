@@ -62,11 +62,11 @@ loadResources(aLoader, doDelayLoad);
 preContent={
    dom: [
    {
-      id:'loader-bar2',
+      id:'loader-bar',
       type:'image',
       tag:'img',
-      rect:['879px','350px','220px','19px','auto','auto'],
-      fill:["rgba(0,0,0,0)",'images/loader-bar2.gif','0px','0px']
+      rect:['402','191','220px','19px','auto','auto'],
+      fill:["rgba(0,0,0,0)",'images/loader-bar.gif','0px','0px']
    }]};//simpleContent
 
 dlContent={
