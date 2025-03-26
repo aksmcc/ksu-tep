@@ -45,7 +45,7 @@ if(document.addEventListener ){
 
    requiresSVG=false;
 
-   doDelayLoad=false;
+   doDelayLoad=true;
    htFallbacks={
     };
 
@@ -62,15 +62,15 @@ loadResources(aLoader, doDelayLoad);
 preContent={
    dom: [
    {
-      id:'loader-bar',
+      id:'loader-bar2',
       type:'image',
       tag:'img',
-      rect:['794px','351px','220px','19px','auto','auto'],
-      fill:["rgba(0,0,0,0)",'images/loader-bar.gif','0px','0px']
+      rect:['879px','350px','220px','19px','auto','auto'],
+      fill:["rgba(0,0,0,0)",'images/loader-bar2.gif','0px','0px']
    }]};//simpleContent
 
-dlContent={dom: [
-]}
-;//simpleContent
+dlContent={
+   dom: [
+]};//simpleContent
 
 })( "EDGE-463673733");

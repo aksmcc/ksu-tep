@@ -186,7 +186,7 @@
             vertical-align:middle;
             line-height:50px;
             float:left;
-            padding:0 2px;
+            padding:0 4px;
             font-size:12pt;
             list-style-type:none;
             cursor:pointer;
@@ -199,15 +199,21 @@
             margin-bottom:30px;
         }
         #animate {
+            min-width:1024px;
             width:100%;
             height:inherit;
             position:absolute;
+            top:50px;
             left:0;
+            right:0;
+            overflow:hidden;
         }
         #edge {
-            width:inherit;
+            width:100%;
             height:inherit;
             border:0 transparent;
+            margin:0;
+            overflow:hidden;
         }
         #link {
             padding:3px;
@@ -292,9 +298,13 @@
     </style><!--頁面樣式-->
     <script type="text/javascript">
         $(function () {
-            
+            var $b_width = parseInt($("body").css("width").replace("px", ""));
+            $b_width = ($b_width-1024) / 2;
+            //alert($("#showcase").css("width"));
+            //alert($("#animate").css("width"));
+            //alert($("body").css("width"));
+            //$("#animate").css({""});
         });
-
     </script>
     <script type="text/javascript">
         /****多媒體相簿&影片****/
@@ -394,6 +404,7 @@
             height:180px;
             background-color:#67bd4b;
             cursor:pointer;
+            z-index:999;
         }
         #acti_call_switch_text {
             width:30px;
@@ -530,12 +541,13 @@
             </ul>
         </div>
         <div id="showcase" style="width:100%;height:400px;">
-            <span id="animate">
-                <iframe id="edge" seamless="seamless" src="ani/animation.html" ></iframe>
-            </span>
+            
             <div id="acti_call_switch" onclick="acti_switch();">
                 <div id="acti_call_switch_text">最新活動</div>
             </div>
+            <span id="animate">
+                <iframe id="edge" src="ani/animation.html" ></iframe>
+            </span>
             <div id="acti_call">
                 <div id="acti_call_options">
                     
