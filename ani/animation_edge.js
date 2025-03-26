@@ -53,14 +53,6 @@ var symbols = {
       },
    states: {
       "Base State": {
-         "${_Text}": [
-            ["style", "top", '-292px'],
-            ["color", "color", 'rgba(0,0,0,1.00)'],
-            ["style", "height", '243px'],
-            ["style", "font-size", '100px'],
-            ["style", "left", '0px'],
-            ["style", "width", '124px']
-         ],
          "${_Stage}": [
             ["color", "background-color", 'rgba(255,255,255,0.00)'],
             ["style", "min-width", '1024px'],
@@ -74,17 +66,25 @@ var symbols = {
             ["style", "left", '0%'],
             ["style", "width", '1024px'],
             ["style", "top", '0px'],
-            ["style", "background-size", [1897,400], {valueTemplate:'@@0@@px @@1@@px'} ],
+            ["style", "clip", [0,1024,400,0], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ],
             ["style", "height", '400px'],
             ["subproperty", "filter.blur", '20px'],
             ["style", "background-position", [-800,0], {valueTemplate:'@@0@@px @@1@@px'} ],
-            ["style", "clip", [0,1024,400,0], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ]
+            ["style", "background-size", [1897,400], {valueTemplate:'@@0@@px @@1@@px'} ]
+         ],
+         "${_Text}": [
+            ["style", "top", '-292px'],
+            ["style", "width", '124px'],
+            ["style", "height", '243px'],
+            ["color", "color", 'rgba(0,0,0,1.00)'],
+            ["style", "left", '0px'],
+            ["style", "font-size", '100px']
          ],
          "${_Text2}": [
-            ["style", "top", '14px'],
             ["color", "color", 'rgba(0,0,0,1.00)'],
+            ["style", "clip", [0,204,63,204], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ],
             ["style", "left", '-110px'],
-            ["style", "clip", [0,204,63,204], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ]
+            ["style", "top", '14px']
          ]
       }
    },
@@ -96,13 +96,13 @@ var symbols = {
          autoPlay: true,
          timeline: [
             { id: "eid151", tween: [ "style", "${_Text2}", "clip", [0,204,63,0], { valueTemplate: 'rect(@@0@@px @@1@@px @@2@@px @@3@@px)', fromValue: [0,204,63,204]}], position: 2000, duration: 500 },
+            { id: "eid98", tween: [ "style", "${_alview}", "background-position", [0,0], { valueTemplate: '@@0@@px @@1@@px', fromValue: [-800,0]}], position: 0, duration: 15000 },
             { id: "eid107", tween: [ "style", "${_alview}", "background-size", [1897,400], { valueTemplate: '@@0@@px @@1@@px', fromValue: [1897,400]}], position: 0, duration: 0 },
             { id: "eid110", tween: [ "style", "${_alview}", "opacity", '1', { fromValue: '0'}], position: 0, duration: 1000 },
             { id: "eid60", tween: [ "style", "${_alview}", "opacity", '0', { fromValue: '1'}], position: 12000, duration: 3000 },
-            { id: "eid98", tween: [ "style", "${_alview}", "background-position", [0,0], { valueTemplate: '@@0@@px @@1@@px', fromValue: [-800,0]}], position: 0, duration: 15000 },
-            { id: "eid149", tween: [ "style", "${_Text2}", "left", '100px', { fromValue: '-110px'}], position: 2000, duration: 500 },
             { id: "eid55", tween: [ "subproperty", "${_alview}", "filter.blur", '0px', { fromValue: '20px'}], position: 0, duration: 1500 },
             { id: "eid114", tween: [ "subproperty", "${_alview}", "filter.blur", '20px', { fromValue: '0.000000px'}], position: 12000, duration: 3000 },
+            { id: "eid149", tween: [ "style", "${_Text2}", "left", '100px', { fromValue: '-110px'}], position: 2000, duration: 500 },
             { id: "eid145", tween: [ "style", "${_Text}", "top", '0px', { fromValue: '-292px'}], position: 1500, duration: 500 }         ]
       }
    }

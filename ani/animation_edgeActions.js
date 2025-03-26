@@ -21,7 +21,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 		
       Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
          $(".ani_pic").css({"margin":"auto","position":"relative"});
-         //alert($("#Stage_sq_01").css("margin"));
 
       });
       //Edge binding end

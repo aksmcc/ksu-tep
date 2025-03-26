@@ -67,11 +67,7 @@
             $pjn == 4 ? $pjn = 0 : $pjn++;
             $("#acti_call_options_title").hide("slide", { direction: "left" }, 300);
             $("#acti_call_options_title").html($acot[$pjn]);
-            //if (!($acot[$pjn].equals($ptemp))) {
-                $("#acti_call_options_title").show("slide", { direction: "right" }, 300);
-            //}
-            
-            //$("#acti_call_options_title").show("slide", { direction: "right" }, 300);
+            $("#acti_call_options_title").show("slide", { direction: "right" }, 300);
         }
         
         function acti_switch() {
@@ -298,12 +294,6 @@
     </style><!--頁面樣式-->
     <script type="text/javascript">
         $(function () {
-            var $b_width = parseInt($("body").css("width").replace("px", ""));
-            $b_width = ($b_width-1024) / 2;
-            //alert($("#showcase").css("width"));
-            //alert($("#animate").css("width"));
-            //alert($("body").css("width"));
-            //$("#animate").css({""});
         });
     </script>
     <script type="text/javascript">
